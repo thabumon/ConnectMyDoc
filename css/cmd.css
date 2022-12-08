@@ -1,0 +1,63 @@
+body{
+  
+    
+}
+h1{
+    background-color: #193953;  
+    margin-left: 3px;
+    text-align: right;
+    font-size: 25px;
+    padding: 7px;
+    padding-right: 40px;
+}
+
+
+
+
+.login-image{
+    width: 50vw;
+    height: 92vh;
+}
+
+.right-side{
+    text-align: center;
+    padding:130px;
+    padding-top: 20px;
+}
+
+.text{
+    font-size: 25px;
+    color: blue;
+}
+
+.email{
+    border-top: transparent;
+    border-right: transparent;
+    border-left: transparent;
+    text-align: center;
+    width: 70%;
+}
+
+
+.password{
+    border-top: transparent;
+    border-right: transparent;
+    border-left: transparent;
+    text-align: center;
+    width: 70%;
+    border-color: gray;
+
+    font-style: italic;
+}
+
+
+.button{
+    background-color: #193953;
+    border: transparent;
+    color: rgb(242, 235, 235);
+    border-radius: 15px;
+    width: 200px;
+    height: 50px;
+    font-size: large;
+
+}

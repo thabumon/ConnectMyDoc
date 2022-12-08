@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Connect my Doc</title>
+
+    <!-- Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/app.css">
+
+    <!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+<!-- MDB -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.css" rel="stylesheet"/>
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://kit.fontawesome.com/2e7f5e5388.js" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+
+<body>
+    <div class="grid-container">
+
+      <!-- Header -->
+      <header class="header">
+        <div class="menu-icon" onclick="openSidebar()">
+          <span class="material-symbols-outlined"> menu</span>
+        </div>
+       <div class="header-left">
+          
+           <div class="window-head"><strong>Book Appoiment/Consultation</strong> </div>
+           <input type="text" class="head-input" placeholder="St. Mary's Clinic">
+           <input type="text" class="head-input" placeholder="Dr. John">
+        </div>
+        <div class="header-right">
+            <div class="navbar">
+             
+              <a href="./cmd logout.html"><button class="logout">LogOut</button></a>
+                
+                <button type="button" class="icon-button">
+                  <span class="material-symbols-outlined">notifications</span>
+                    <span class="icon-button__badge"></span>
+                  </button>
+
+                  
+                  <div class="dropdown">
+                    <button class="btn btn-link dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="text-decoration: none; font-size: small;color: black;">John Doe</button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2" >
+                      <button class="dropdown-item" type="button">Status : Online</button>
+                      <button class="dropdown-item" type="button">Account Settings</button>
+                      <button class="dropdown-item" type="button">Profile</button>
+                    </div>
+                  </div>
+                <img class="img-nav" src="doctor.jpeg" alt="img">
+            </div>
+
+        </div>
+      </header>
+      <!-- End Header -->
+
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <div class="sidebar-title">
+          <div class="sidebar-brand">
+             Connect My Doc  <div class="bar-icon"> <i class="fa-sharp fa-solid fa-bars"></i>
+         
+             </div>
+          </div>  
+          </div>
+         
+
+        <ul class="sidebar-list">
+          <li class="sidebar-list-item">
+             <p class="side-active"><i class="fa-sharp fa-solid fa-chart-simple icon-dash"></i> Dashboard <div class="noti-count">2</div></p>
+          </li>
+          <li class="sidebar-list-item">
+            <span class="material-symbols-outlined"> person</span> <p>Patients  </p>   
+          </li>
+          <li class="sidebar-list-item">
+            <span class="material-symbols-outlined">forum</span> <p>Chat Room</p>
+          </li>
+          <li class="sidebar-list-item">
+            <span class="material-symbols-outlined">settings</span> <p>Settings</p>
+          </li>
+        </ul>
+      </aside>
+      <!-- End Sidebar -->
+
+      <!-- Main -->
+      <main class="main-container">
+        <div class="background">
+          <section class="appoiment">
+              <div class="main-content">
+                 <div class="main-heading"><h1 >Select a patient to book Appoiment/Consultation</h1></div> 
+                 <div class="count">
+                   
+      
+                  <div class=" board">
+                     
+                      <div class="board-inner">
+                          <ul class="nav nav-tabs" id="myTab">
+                              <div class="liner">
+                                <div class="liner-blue"></div>
+                              </div>
+                              <li class="active">
+                                  <a href="#" aria-controls="home" id="DivPatientDetails" name="PatientDetails"  >
+                                      <span class="round-tabs one">
+                                          <i class="icon icon-profile-male"></i>1
+                                          <!-- <h4>Patient's Details</h4> -->
+                                      </span>
+                                    
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="#" aria-controls="profile" id="DivPatientEligibility" name="PatientEligibility" >
+                                      <span class="round-tabs two">
+                                          <i class="icon icon-pencil"></i>2
+                                          <!-- <h4>Patient's Eligibility</h4> -->
+                                      </span>
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="#" aria-controls="prototyping" id="DivPatientDeclaration" name="PatientDeclaration" class="disabled">
+                                      <span class="round-tabs three">
+                                          <i class="icon icon-layers"></i>3
+                                          <!-- <h4>Patient's Declaration</h4> -->
+                                      </span>
+                                  </a>
+                              </li>
+                              <li>
+                              <a href="#" aria-controls="prototyping1" id="DivPatientDeclaration" name="PatientDeclaration" class="disabled">
+                                <span class="round-tabs four">
+                                    <i class="icon icon-layers"></i>4
+                                    <!-- <h4>Patient's Declaration</h4> -->
+                                </span>
+                            </a>
+                        </li>
+                   </ul>
+            
+                      </div>
+                      
+                </div>
+               
+        </div>
+        <div class="form1">
+          <label for="Patient">Patient</label> <br>
+        <input type="text" id="Patient" placeholder="Search for Patient via Phone or Name" required>
+         <div class="btn-container"><a href="app2.html"><button class="btn1" type="submit"  >Submit</button></a></div> 
+        </div> 
+      </section>
+      <div class="calender-container">
+          <div class="tab1">
+              <div class="head-tab1"><h1>Your Schedules</h1> <hr></div>
+              <div class="calender123"><div class="month">
+                  <ul>
+                    <li class="prev">&#10094;</li>
+                    <li class="next">&#10095;</li>
+                    <li>January<span style="font-size:15px"> 2018</span></li>
+                  </ul>
+                </div>
+                
+                <ul class="weekdays">
+                  <li>Mo</li>
+                  <li>Tu</li>
+                  <li>We</li>
+                  <li>Th</li>
+                  <li>Fr</li>
+                  <li>Sa</li>
+                  <li>Su</li>
+                </ul>
+                
+                <ul class="days">
+                  <li>1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                  <li>5</li>
+                  <li>6</li>
+                  <li>7</li>
+                  <li>8</li>
+                  <li>9</li>
+                  <li><span class="active">10</span></li>
+                  <li>11</li>
+                  <li>12</li>
+                  <li>13</li>
+                  <li>14</li>
+                  <li>15</li>
+                  <li>16</li>
+                  <li>17</li>
+                  <li>18</li>
+                  <li>19</li>
+                  <li>20</li>
+                  <li>21</li>
+                  <li>22</li>
+                  <li>23</li>
+                  <li>24</li>
+                  <li>25</li>
+                  <li>26</li>
+                  <li>27</li>
+                  <li>28</li>
+                  <li>29</li><li>30</li>
+                  <li>31</li>
+                </ul></div>
+          </div>
+          
+            
+          <div class="tab2">
+            <div class="details-box">
+              <div class="top-part">
+                <div class="top-in1">
+                  <div class="circular-container"><p>A</p></div>
+                </div>
+                <div class="top-in2">
+                    <div class="top-in2-up"><i class='fas fa-portrait' style='font-size:21px'></i><p>  Ajay</p><br>
+                    <h2 class="p-small">Heart Patient, Sugar Patient</h2>
+                    </div>
+                    
+                </div>
+                <div class="top-in3">
+                 <div class="icon1"><i class="fa-sharp fa-solid fa-calendar-day" style="font-size:30px ;"></i></div> 
+                  <div class="horizontal-break"></div>
+                  <div class="time-clock"><i class="fa-sharp fa-solid fa-clock"></i></div>
+                 <div class="time"> <p>13:13</p></div>
+                </div>
+               
+            </div>
+            <div class="bottom-part">
+              <div class="bottom-part-icon"><i class="fa-sharp fa-solid fa-clipboard"></i></div>
+              <div class="bottom-para">Patient encountered chest pain morning during Jogging for an hour </div>
+            </div>
+              </div>
+              <div class="details-box">
+                <div class="top-part">
+                  <div class="top-in1">
+                    <div class="circular-container"><p>B</p></div>
+                  </div>
+                  <div class="top-in2">
+                      <div class="top-in2-up"><i class='fas fa-portrait' style='font-size:21px'></i><p> Bopade Ankit</p><br>
+                      <h2 class="p-small">Sugar Patient, Low BP</h2>
+                      </div>
+                      
+                  </div>
+                  <div class="top-in3">
+                   <div class="icon1"><i class="fa-sharp fa-solid fa-calendar-day" style="font-size:30px ;"></i></div> 
+                    <div class="horizontal-break"></div>
+                    <div class="time-clock"><i class="fa-sharp fa-solid fa-clock"></i></div>
+                   <div class="time"> <p>13:51</p></div>
+                  </div>
+                 
+              </div>
+              <div class="bottom-part">
+                <div class="bottom-part-icon"><i class="fa-sharp fa-solid fa-clipboard"></i></div>
+                <div class="bottom-para">Patient had headache morning, Also felt dizzy last night </div>
+              </div>
+              </div>
+              <!-- <div class="details-box"></div>
+              <div class="details-box"></div>
+              <div class="details-box"></div>
+              <div class="details-box"></div>  -->
+          </div>
+      </div>
+  </div>
+  
+
+      </main>
+      <!-- End Main -->
+
+    </div>
+
+    <!-- Scripts -->
+    <!-- ApexCharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+    <!-- Custom JS -->
+    <script src="scripts.js"></script>
+   <!-- MDB -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>

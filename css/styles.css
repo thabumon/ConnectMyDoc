@@ -1,0 +1,400 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #e6e8ed;
+  color: #666666;
+  font-family: "Montserrat", sans-serif;
+}
+
+.material-icons-outlined {
+  vertical-align: middle;
+  line-height: 1px;
+}
+
+.text-primary {
+  color: #666666;
+}
+
+.text-blue {
+  color: #246dec;
+}
+
+.text-red {
+  color: #cc3c43;
+}
+
+.text-green {
+  color: #367952;
+}
+
+.text-orange {
+  color: #f5b74f;
+}
+
+.font-weight-bold {
+  font-weight: 600;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 180px 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 3fr;
+  grid-template-areas:
+    "sidebar header header header"
+    "sidebar main main main";
+  height: 100vh;
+}
+
+
+/* ---------- HEADER ---------- */
+
+.header {
+  grid-area: header;
+  height: 60px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px 0 30px;
+  box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
+}
+
+.menu-icon {
+  display: none;
+}
+
+
+/* ---------- SIDEBAR ---------- */
+
+#sidebar {
+  grid-area: sidebar;
+  height: 100%;
+  background-color: rgb(11, 27, 74);
+  color: white;
+  overflow-y: auto;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+#sidebar a{
+  text-decoration: none;
+  color: white;
+}
+
+.sidebar-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px 20px 20px;
+  margin-bottom: 20px;
+}
+
+.sidebar-title > span {
+  display: none;
+}
+
+.sidebar-brand {
+  margin-top: 15px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.sidebar-list {
+  padding: 0;
+  margin-top: 15px;
+  list-style-type: none;
+  vertical-align: middle;
+}
+
+.sidebar-list-item {
+  display: flex;
+  justify-content: left;
+  padding:15px;
+}
+.sidebar-list-item p{
+  display: flex;
+  justify-content: left;
+  padding-left:15px;
+}
+
+
+.sidebar-list-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.sidebar-responsive {
+  display:flex !important;
+  position: absolute;
+  /*
+    the z-index of the ApexCharts is 11
+    we want the z-index of the sidebar higher so that
+    the charts are not showing over the sidebar 
+    on small screens
+  */
+  z-index: 12 !important;
+}
+/*-------NAVBAR-----*/
+.nav{
+  display: flex;
+ justify-content: right;
+}
+.header .navbar{
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  height: 60px;
+  width: 100%;
+  box-shadow: none;
+}
+
+a{
+ text-decoration: none;
+}
+
+.logout{
+  margin-right: 15px;
+  border: none;
+  font-weight: bolder;
+  background-color:white;
+}
+
+
+.icon-button {
+ position: relative;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ width: 12px;
+ height: 12px;
+ color: #000000;
+ border: none;
+ outline: none;
+ border-radius: 50%;
+ margin-right: 15px;
+
+
+}
+
+.icon-button:hover {
+ cursor: pointer;
+}
+
+.icon-button:active {
+ background: white;
+}
+
+.icon-button__badge {
+ position: absolute;
+ top: -10px;
+ right: -10px;
+ width: 8px;
+ height: 8px;
+ background: red;
+ color: white;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ border-radius: 50%;
+  
+}
+
+
+
+.img-nav{
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+
+
+
+/* ---------- SCROLLBARS ---------- */
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #a5aaad;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #4f35a1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a5aaad;
+}
+
+
+/* ---------- MEDIA QUERIES ---------- */
+
+
+/* Medium <= 992px */
+@media screen and (max-width: 992px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 3fr;
+    grid-template-areas:
+      "header"
+      "main";
+  }
+
+  #sidebar {
+    display: none;
+  }
+
+  .menu-icon {
+    display: inline;
+  }
+
+  .sidebar-title > span {
+    display: inline;
+  }
+}
+/* ---------- MAIN ---------- */
+
+.main-container {
+  grid-area: main;
+  overflow-y: auto;
+  padding: 20px 20px;
+}
+
+.main-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-title > p {
+  font-size: 20px;
+}
+
+.smenu{
+  display:flexbox;
+  justify-items: center;
+  float: left;
+  width: 25%;
+  height: 100%;
+  background-color: white;
+  box-shadow: 0 6px 7px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+   border: black;
+  border-radius: 10px;
+}
+
+ .smenu p{
+  display: flex;
+  justify-content: center;
+ }
+.main-container .smenu .activel{
+  font-size:x-large;
+  text-decoration: none;
+  color: #000000;
+}
+.main-container .smenu a{
+
+  text-decoration: none;
+
+}
+.scontent{
+  display:flexbox;
+  justify-items: center;
+  float: left;
+  width: 73%;
+  height: 100%;
+  background-color: white;
+  box-shadow: 0 6px 7px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  margin-left: 25px;
+  border: black;
+  border-radius: 10px;
+}
+.profile-pic {
+  width:100px;
+  height: 100px;
+  display: inline-block;
+}
+
+.file-upload {
+  display: none;
+}
+.circle {
+  margin-top: 100px;
+  margin-left:30px ;
+  border-radius: 100% !important;
+  overflow: hidden;
+  width: 105px;
+  height: 105px;
+  border: 2px solid rgba(52, 51, 51, 0.3);
+  position: absolute;
+  top: 72px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.p-image {
+position: absolute;
+padding: 4px;
+top: 250px;
+right: 970px;
+color: white;
+background-color: rgb(20, 42, 186);
+border-radius: 50%;
+transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+}
+.p-image:hover {
+transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+}
+.upload-button {
+font-size: 1.2em;
+}
+
+.upload-button:hover {
+transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+color: #999;
+}
+.data{
+  width: 75%;
+  height:75%;
+  display: flex;
+  justify-content: left;
+  margin-top: 70px;
+  margin-left: 180px;
+  font-size: larger;
+  color: ;
+ 
+}
+.data input{
+  padding-top: 10px;
+  border: none;
+}
+.data input:hover{
+  border-bottom: 2px solid black;
+}
+.data .edit{
+  width: 80px;
+  height: 40px;
+  border-radius: 5px;
+  margin-left: 200px;
+  background-color: white;
+}
+.data select{
+  font-weight: bold;
+}
+.btn01{
+  width: 100px;
+  height: 30px;
+  border-radius: 25px;
+  background-color: white;
+}
+.clndr{
+  height: 550px;
+  width: 100%;
+}
